@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script src="https://www.googletagmanager.com/gtag/js?id=UA-123066503-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-123066503-2');
+		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height">
+		<title>VRtual House</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<!-- Origin Trial Token, feature = WebXR Device API (For Chrome M69+), origin = https://vrtual.house, expires = 2019-01-05 -->
+		<meta http-equiv="origin-trial" data-feature="WebXR Device API (For Chrome M69+)" data-expires="2019-01-23" content="ApOAtFE1f+MSMjDZsUVtOtlAoRC1R3G0KY6/hwLPKDFB5FvneXvqHssHZAZgqbPAT+NY1NPgTpG+mcZEcqom+wgAAABUeyJvcmlnaW4iOiJodHRwczovL3ZydHVhbC5ob3VzZTo0NDMiLCJmZWF0dXJlIjoiV2ViWFJEZXZpY2VNNjkiLCJleHBpcnkiOjE1NDgyMDE1OTl9">
+	</head>
+	<body>
+		<div id="dragAndDropArea" class="hidden"><p>Drag and drop GLB file here</p></div>
+		<div id="loadingScreen">
+			<div id="loadingBarBackground">
+				<div id="loadingBar"></div>
+				<div id="loadingPercent">0</div>
+				<div id="welcomeText">
+					<p class="hidden">Ihr nächstes Urlaubsziel wartet auf Sie!</p>
+					<p class="hidden">Kommen Sie herein und schauen sich um...</p>
+				</div>
+			</div>
+		</div>
+		<div id="tutorialScreen" class="hidden">
+			<div id="mouseTutorial" class="hidden"></div>
+			<div id="touchTutorial" class="hidden"></div>
+		</div>
+		<main id="playGround">
+			<canvas id="myCanvas"></canvas>
+		</main>
+
+		<div id="toggleFullScreen"></div>
+
+		<script src="src/app.bundle.js"></script>
+	</body>
+</html>
